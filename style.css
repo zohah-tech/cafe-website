@@ -1,0 +1,275 @@
+/* ---------------------- Reset ---------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------------- Body ---------------------- */
+body {
+    font-family: 'Playfair Display', serif;
+    color: rgba(255, 255, 255, 0.9);
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #1b1a1d, #2b2a2f);
+    padding-top: 70px;
+}
+
+/* ---------------------- Navbar ---------------------- */
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0.8rem 2rem;
+    background: rgba(100, 136, 143, 0.16);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar .logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 10px;
+    filter: brightness(1.2);
+}
+
+.navbar .logo b,
+.navbar .logo i {
+    font-size: 1.5rem;
+    color: #ffb347;
+}
+
+.nav-order-btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    background: #ffb347;
+    color: #7d6e9b2c;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255,179,71,0.4);
+}
+
+.nav-order-btn:hover {
+    background: #ffd175;
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(255,179,71,0.5);
+}
+
+/* ---------------------- Hero Section ---------------------- */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+/* ---------------------- Headings (Golden Italics) ---------------------- */
+.hero-title {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 50px;
+    color: #ffb347;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease forwards, floatUp 4s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+
+.hero-subtitle {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease forwards;
+    animation-delay: 0.6s;
+}
+
+.food-text h2,
+.location-section h2,
+.info-grid-section h3 {
+    font-style: italic;
+    font-weight: 600;
+    color: #ffb347;
+}
+
+/* ---------------------- Hero Description ---------------------- */
+.hero-desc {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.7;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease forwards;
+    animation-delay: 0.9s;
+}
+
+/* ---------------------- Buttons ---------------------- */
+.btn.heartbeat-btn {
+    border-radius: 30px;
+    font-weight: 600;
+    background: #ffb347;
+    color: #1b1a1d;
+    padding: 10px 25px;
+    box-shadow: 0 4px 12px rgba(255,179,71,0.4);
+    opacity: 0;
+    animation: fadeInUp 1.2s ease forwards, heartbeat 1.5s infinite;
+    animation-delay: 1.5s;
+}
+
+.btn.heartbeat-btn:hover {
+    transform: scale(1.05);
+    background: #ffd175;
+}
+
+/* About Us link */
+.about-link a {
+    font-style: italic;
+    color: #ffb347;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,179,71,0.6);
+    opacity: 0;
+    animation: fadeInUp 1.2s ease forwards;
+    animation-delay: 1.2s;
+}
+
+.about-link a:hover {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+/* ---------------------- Food Grid ---------------------- */
+.food-grid-section {
+    padding: 40px 60px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
+}
+
+.food-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.food-image img {
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.food-text p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* ---------------------- Location ---------------------- */
+.location-section h2 {
+    margin-bottom: 20px;
+}
+
+.map {
+    width: 90%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 15px;
+    border: none;
+}
+
+/* ---------------------- Info Grid ---------------------- */
+.info-grid-section {
+    background: rgba(255,255,255,0.05);
+    padding: 60px 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(4px);
+}
+
+.info-grid-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-grid-section ul li {
+    margin-bottom: 10px;
+}
+
+/* ---------------------- Animations ---------------------- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatUp {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.08); }
+    50% { transform: scale(1.12); }
+    75% { transform: scale(1.08); }
+}
+
+/* ---------------------- Responsive ---------------------- */
+@media (max-width: 1200px) {
+    .food-grid-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .food-item { width: 45%; }
+}
+
+@media (max-width: 768px) {
+    .hero-title { font-size: 50px; }
+    .hero-subtitle { font-size: 18px; }
+    .hero-desc { font-size: 16px; }
+    .btn.heartbeat-btn { padding: 8px 20px; font-size: 16px; }
+    .food-grid-section { padding: 20px; }
+}
+
+@media (max-width: 600px) {
+    .food-item { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .hero-title { font-size: 36px; }
+    .hero-subtitle { font-size: 16px; }
+    .hero-desc { font-size: 14px; }
+    .nav-order-btn { padding: 6px 12px; font-size: 14px; }
+    .food-text h2 { font-size: 24px; }
+    .food-text p { font-size: 14px; }
+}
