@@ -1,0 +1,169 @@
+/* ---------------------- Global Reset ---------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------------- Body ---------------------- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #1b1a1d, #2b2a2f);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* ---------------------- Main Container ---------------------- */
+.about-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+/* ---------------------- Titles ---------------------- */
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 50px;
+    color: #ffb347;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 36px;
+    color: #ffb347;
+    margin: 40px 0 20px 0;
+    text-align: center;
+}
+
+/* ---------------------- Text ---------------------- */
+.about-text,
+.item-text,
+.contact p,
+.branches li,
+.order-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ---------------------- Gallery ---------------------- */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.about-item-container {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+}
+
+.about-item-container .about-item {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Description under images/videos */
+.item-text {
+    color: #d8d8d8;
+    margin-top: 8px;
+}
+
+/* Hover effect for gallery items */
+.gallery img:hover,
+.gallery video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(255, 179, 71, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+/* ---------------------- Order Section ---------------------- */
+.order-section {
+    text-align: center;
+    margin: 20px 0 40px 0;
+    background: rgba(255, 179, 71, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* ---------------------- Contact & Branches ---------------------- */
+.contact,
+.branches {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.branches {
+    list-style: none;
+    padding-left: 0;
+}
+
+.branches li {
+    margin-bottom: 12px;
+}
+
+/* ---------------------- Show Animation ---------------------- */
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: all 0.8s ease;
+}
+
+/* ---------------------- Back Home Button ---------------------- */
+.back-home {
+    display: inline-block;
+    margin: 25px;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+    color: #f1c40f;
+    text-decoration: none;
+    font-size: 1.05rem;
+    border-radius: 40px;
+    border: 1px solid rgba(241, 196, 15, 0.4);
+    box-shadow: 0 0 15px rgba(241, 196, 15, 0.2);
+    letter-spacing: 0.8px;
+    transition: 0.4s ease;
+    font-weight: 500;
+}
+
+.back-home:hover {
+    background: linear-gradient(135deg, #2c2c2c, #3d3d3d);
+    box-shadow: 0 0 25px rgba(241, 196, 15, 0.5);
+    transform: translateX(-4px) scale(1.05);
+}
+
+/* ---------------------- Responsive ---------------------- */
+@media (max-width: 768px) {
+    .about-title {
+        font-size: 38px;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .about-item-container {
+        width: 100%;
+    }
+    .about-text,
+    .item-text {
+        font-size: 16px;
+    }
+    .order-section p,
+    .contact p,
+    .branches li {
+        font-size: 15px;
+    }
+}
